@@ -1,1 +1,1 @@
-print("hollak")
+print("yes")
