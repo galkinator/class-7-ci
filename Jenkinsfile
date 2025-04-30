@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // This checks out the code from the repository.
-                git clone "https://github.com/galkinator/class-7-ci.git"
+        stage('Project1'){
+            steps{
+                cleanWs()
+                dir('project1') {
+                    // Doing your project 1 stuff
+                    git(url: 'https://github.com/galkinator/class-7-ci.git', branch: 'main')
+                }
+
             }
         }
         stage('Run Script') {
